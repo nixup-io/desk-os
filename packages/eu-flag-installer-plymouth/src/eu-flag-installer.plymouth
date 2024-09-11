@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=EU flag Installer
+Description=A theme that displays the EU flag Installer logo
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/eu-flag-installer
+ScriptFile=/usr/share/plymouth/themes/eu-flag-installer/eu-flag-installer.script

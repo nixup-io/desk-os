@@ -56,7 +56,7 @@ flake = f"""
   inputs = {{
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     desk-os = {{
-      url = "github:nixup-io/desk-os";
+      url = "github:nixup-io/desk-os/eu-edition";
       inputs.nixpkgs.follows = "nixpkgs";
     }};
   }};
@@ -114,11 +114,6 @@ configuration_body = """
     extraGroups = [ @@groups@@ ];
   };
 
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "@@username@@";
-  };
-
   nixpkgs.config.allowUnfree = true;
 """
 
@@ -168,7 +163,7 @@ configuration_tail = """
 """
 
 def pretty_name():
-    return _("Installing deskOS (this can take a while depending on your Internet speed)...")
+    return _("Installing deskOS - EU Edition (this can take a while depending on your Internet speed)...")
 
 
 status = pretty_name()
@@ -243,7 +238,7 @@ def run():
 
     if (gs.value("username") is not None):
         fullname = gs.value("fullname")
-        groups = ["networkmanager", "wheel"]
+        groups = ["networkmanager"]
 
         catenate(variables, "username", gs.value("username"))
         catenate(variables, "fullname", fullname)
@@ -295,7 +290,7 @@ def run():
     libcalamares.utils.host_env_process_output(
         ["cp", "/dev/stdin", flakeFile], None, flake)
 
-    status = _("Installing deskOS (this can take a while depending on your Internet speed)...")
+    status = _("Installing deskOS - EU Edition (this can take a while depending on your Internet speed)...")
 
     # Install
     try:
