@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Lightbulb
+Description=A theme that displays the Lightbulb
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/lightbulb
+ScriptFile=/usr/share/plymouth/themes/lightbulb/lightbulb.script
