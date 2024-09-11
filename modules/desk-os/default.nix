@@ -20,12 +20,12 @@
     loader.efi.canTouchEfiVariables = true;
     plymouth = {
       enable = true;
-      theme = "desk-os";
-      themePackages = [(pkgs.callPackage ../../packages/desk-os-plymouth {})];
+      theme = "eu-flag";
+      themePackages = [ (pkgs.callPackage ../../packages/eu-flag-plymouth {}) ];
     };
   };
 
-  system.nixos.distroName = "deskOS 1";
+  system.nixos.distroName = "deskOS 1 - EU Edition";
 
   system.autoUpgrade = {
     enable = true;
@@ -76,8 +76,8 @@
       {
         settings = {
           "org/gnome/desktop/background" = {
-            picture-uri = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/geometrics-l.jxl";
-            picture-uri-dark = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/geometrics-d.jxl";
+            picture-uri = "file://${../../assets/eu-wallpaper.jpg}";
+            picture-uri-dark = "file://${../../assets/eu-wallpaper.jpg}";
           };
 
           "org/gnome/desktop/wm/preferences" = {
@@ -85,7 +85,7 @@
           };
 
           "org/gnome/desktop/screensaver" = {
-            picture-uri = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/geometrics-l.jxl";
+            picture-uri = "file://${../../assets/eu-wallpaper.jpg}";
           };
 
           "org/gnome/desktop/interface" = {

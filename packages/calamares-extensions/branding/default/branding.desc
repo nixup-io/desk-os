@@ -9,21 +9,21 @@ windowExpanding: fullscreen
 windowPlacement: center
 sidebar: none
 strings:
-    productName:         deskOS
-    shortProductName:    deskOS
+    productName:         deskOS - EU Edition
+    shortProductName:    deskOS - EU Edition
     version:             1
     shortVersion:        1
-    versionedName:       deskOS 1
-    shortVersionedName:  deskOS 1
-    bootloaderEntryName: deskOS
-    productUrl:          https://nixup.io
-    supportUrl:          https://nixup.io
-    knownIssuesUrl:      https://github.com/nixup-io/desk-os/issues
-    releaseNotesUrl:     https://nixup.io
-    donateUrl:           https://nixup.io
+    versionedName:       deskOS 1 - EU Edition
+    shortVersionedName:  deskOS 1 - EU Edition
+    bootloaderEntryName: deskOS - EU Edition
+    productUrl:          https://www.edps.europa.eu/
+    supportUrl:          https://www.edps.europa.eu/
+    knownIssuesUrl:      https://github.com/EU-EDPS
+    releaseNotesUrl:     https://www.edps.europa.eu/
+    donateUrl:           https://www.edps.europa.eu/
 images:
-    productIcon: "desk-os-logo.png"
-    productLogo: "desk-os-logo.png"
+    productIcon: "desk-os-logo-eu.png"
+    productLogo: "desk-os-logo-eu.png"
 style:
    SidebarBackground:        "#292F34"
    SidebarText:              "#FFFFFF"

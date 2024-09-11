@@ -30,7 +30,7 @@ in {
     (modulesPath + "/profiles/installation-device.nix")
   ];
 
-  system.nixos.distroName = "deskOS 1";
+  system.nixos.distroName = "deskOS 1 - EU Edition";
 
   # FIXME(m): Disable squashfs compression during development
   # isoImage.squashfsCompression = null;
@@ -43,8 +43,8 @@ in {
     loader.timeout = lib.mkForce 0;
     plymouth = {
       enable = true;
-      theme = "desk-os-installer";
-      themePackages = [(pkgs.callPackage ../../packages/desk-os-installer-plymouth {})];
+      theme = "eu-flag-installer";
+      themePackages = [ (pkgs.callPackage ../../packages/eu-flag-installer-plymouth {}) ];
     };
     # NOTE(m): Enable kernel modules that improve wifi support on
     # Macbooks during installation.
@@ -125,6 +125,8 @@ in {
     gnomeExtensions.no-overview
   ];
 
+  i18n.defaultLocale = "en_GB.UTF-8";
+
   # Support choosing from any locale
   i18n.supportedLocales = ["all"];
 
@@ -147,9 +149,9 @@ in {
       sleep-inactive-ac-type='nothing'
       sleep-inactive-battery-type='nothing'
       [org.gnome.desktop.background]
-      picture-uri='file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/geometrics-l.jxl'
+      picture-uri='file://${../../assets/eu-wallpaper.jpg}'
       [org.gnome.desktop.screensaver]
-      picture-uri='file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/geometrics-l.jxl'
+      picture-uri='file://${../../assets/eu-wallpaper.jpg}'
     '';
 
     extraGSettingsOverridePackages = [pkgs.gnome.gnome-settings-daemon];

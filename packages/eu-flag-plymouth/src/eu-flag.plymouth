@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=EU flag
+Description=A theme that displays the EU flag
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/eu-flag
+ScriptFile=/usr/share/plymouth/themes/eu-flag/eu-flag.script
