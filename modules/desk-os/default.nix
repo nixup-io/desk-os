@@ -20,12 +20,12 @@
     loader.efi.canTouchEfiVariables = true;
     plymouth = {
       enable = true;
-      theme = "desk-os";
-      themePackages = [(pkgs.callPackage ../../packages/desk-os-plymouth {})];
+      theme = "lightbulb";
+      themePackages = [ (pkgs.callPackage ../../packages/lightbulb-plymouth {}) ];
     };
   };
 
-  system.nixos.distroName = "deskOS 1";
+  system.nixos.distroName = "deskOS 1 - School Edition";
 
   system.autoUpgrade = {
     enable = true;
@@ -76,8 +76,8 @@
       {
         settings = {
           "org/gnome/desktop/background" = {
-            picture-uri = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/geometrics-l.jxl";
-            picture-uri-dark = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/geometrics-d.jxl";
+            picture-uri = "file://${../../assets/school-wallpaper.jpg}";
+            picture-uri-dark = "file://${../../assets/school-wallpaper.jpg}";
           };
 
           "org/gnome/desktop/wm/preferences" = {
@@ -85,7 +85,7 @@
           };
 
           "org/gnome/desktop/screensaver" = {
-            picture-uri = "file://${pkgs.gnome.gnome-backgrounds}/share/backgrounds/gnome/geometrics-l.jxl";
+            picture-uri = "file://${../../assets/school-wallpaper.jpg}";
           };
 
           "org/gnome/desktop/interface" = {
@@ -171,12 +171,12 @@
             menu-layout = "Windows";
             pinned-apps = lib.gvariant.mkArray [
               [(lib.gvariant.mkDictionaryEntry "id" "firefox.desktop")]
-              [(lib.gvariant.mkDictionaryEntry "id" "org.gnome.Geary.desktop")]
-              [(lib.gvariant.mkDictionaryEntry "id" "org.gnome.Calendar.desktop")]
               [(lib.gvariant.mkDictionaryEntry "id" "org.gnome.Nautilus.desktop")]
               [(lib.gvariant.mkDictionaryEntry "id" "writer.desktop")]
               [(lib.gvariant.mkDictionaryEntry "id" "calc.desktop")]
               [(lib.gvariant.mkDictionaryEntry "id" "impress.desktop")]
+              [(lib.gvariant.mkDictionaryEntry "id" "org.kde.krita.desktop")]
+              [(lib.gvariant.mkDictionaryEntry "id" "supertuxkart.desktop")]
               [(lib.gvariant.mkDictionaryEntry "id" "org.gnome.Software.desktop")]
             ];
           };
@@ -212,7 +212,9 @@
     gnomeExtensions.just-perfection
     gnomeExtensions.printers
     gnomeExtensions.removable-drive-menu
+    krita
     libreoffice
+    superTuxKart
   ];
 
   environment.gnome.excludePackages = with pkgs; [

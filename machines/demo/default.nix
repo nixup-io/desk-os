@@ -20,9 +20,8 @@
 
     # Localization
     time.timeZone = "Europe/Brussels";
-    i18n.defaultLocale = "en_US.UTF-8";
-    services.xserver.xkb.layout = "us";
-    services.xserver.xkb.variant = "dvorak";
+    i18n.defaultLocale = "nl_NL.UTF-8";
+    services.xserver.xkb.layout = "nl";
 
     services.displayManager.autoLogin = {
       enable = true;

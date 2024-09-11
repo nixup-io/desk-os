@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Lightbulb Installer
+Description=A theme that displays the Lightbulb Installer logo
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/lightbulb-installer
+ScriptFile=/usr/share/plymouth/themes/lightbulb-installer/lightbulb-installer.script

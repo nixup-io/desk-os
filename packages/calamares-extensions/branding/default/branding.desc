@@ -9,21 +9,21 @@ windowExpanding: fullscreen
 windowPlacement: center
 sidebar: none
 strings:
-    productName:         deskOS
-    shortProductName:    deskOS
+    productName:         deskOS - School Edition
+    shortProductName:    deskOS - School Edition
     version:             1
     shortVersion:        1
-    versionedName:       deskOS 1
-    shortVersionedName:  deskOS 1
-    bootloaderEntryName: deskOS
+    versionedName:       deskOS 1 - School Edition
+    shortVersionedName:  deskOS 1 - School Edition
+    bootloaderEntryName: deskOS - School Edition
     productUrl:          https://nixup.io
     supportUrl:          https://nixup.io
     knownIssuesUrl:      https://github.com/nixup-io/desk-os/issues
     releaseNotesUrl:     https://nixup.io
     donateUrl:           https://nixup.io
 images:
-    productIcon: "desk-os-logo.png"
-    productLogo: "desk-os-logo.png"
+    productIcon: "desk-os-logo-school.png"
+    productLogo: "desk-os-logo-school.png"
 style:
    SidebarBackground:        "#292F34"
    SidebarText:              "#FFFFFF"
